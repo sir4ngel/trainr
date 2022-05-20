@@ -2,7 +2,7 @@ import '../../../../global.js';
 class RoutineHandler {
     onGetRoutine = async (routineData, token) => {
         try {
-            var fetchedData = await fetch('http://' + global.ip + '/trainr/public/api/routine/student/get?user_id=' + routineData.user_id + '&date=' + routineData.date + '&classroom_id=' + routineData.classroom_id, {
+            var fetchedData = await fetch('http://' + global.ip + '/api/routine/student/get?user_id=' + routineData.user_id + '&date=' + routineData.date + '&classroom_id=' + routineData.classroom_id, {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json',

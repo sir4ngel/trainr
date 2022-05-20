@@ -6,7 +6,7 @@ class ClassroomHandler{
                 "code": classroomData.code,
                 "user_id": classroomData.user_id
             }
-            var fetchedData = await fetch('http://' + global.ip + '/trainr/public/api/classroom/student/asign', {
+            var fetchedData = await fetch('http://' + global.ip + '/api/classroom/student/asign', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -26,7 +26,7 @@ class ClassroomHandler{
 
     onGetClassrooms = async (user_id, token) => {
         try {
-            var fetchedData = await fetch('http://' + global.ip + '/trainr/public/api/classroom/student/get?user_id=' + user_id, {
+            var fetchedData = await fetch('http://' + global.ip + '/api/classroom/student/get?user_id=' + user_id, {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json',
